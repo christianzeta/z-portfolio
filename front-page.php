@@ -5,7 +5,24 @@
             <p><?php the_field('text'); ?></p>
         </section>
         <section id="front-page-links">
-
+            <div class="link-card">
+                <div class="link-card-text">
+                <h2>Github</h2>
+                    <p><a href="<?php the_field('github_link')?>">Se mina projekt på Github</a></p>
+                </div>
+            </div>
+            <div class="link-card">
+                <div class="link-card-text">
+                <h2>Email</h2>
+                    <p><?php the_field('email')?></p>
+                </div>
+            </div>
+            <div class="link-card">
+                <div class="link-card-text">
+                <h2>LinkedIn</h2>
+                    <p><a href="<?php the_field('linkedin')?>">Följ gärna mig här</a></p>
+                </div>
+            </div>
         </section>
     </div>
 
