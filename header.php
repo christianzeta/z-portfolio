@@ -8,3 +8,14 @@
 </head>
 <body>
     <div id="wrapper">
+        <nav id="main-nav">
+            <?php 
+                wp_nav_menu(
+                array(
+                    'menu' => 'primary',
+                    'container' => '',
+                    'theme_location' => 'primary',
+                    'items_wrap' => '<ul class="main-nav-ul">%3$s</ul>',
+                ));
+            ?>
+        </nav>

@@ -13,4 +13,14 @@ function z_portfolio_register_styles(){
 
 add_action('wp_enqueue_scripts', 'z_portfolio_register_styles');
 
+function z_portfolio_menus(){
+    $locations = array(
+        'primary' => "primary",
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init', 'z_portfolio_menus');
+
 ?>
