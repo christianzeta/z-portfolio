@@ -1,8 +1,13 @@
-<?php
-get_header();
-if(have_posts()) : while(have_posts()) : the_post();
-    the_title();
-    the_content();
-endwhile; endif;
-get_footer();
+<?php get_header(); ?>
+
+    <section id="archive-container">
+    <?php 
+    if(have_posts()) : while(have_posts()) : the_post();
+        get_template_part( '/template-parts/content', 'archive' );
+    endwhile; endif;
+    ?>
+    </section>
+
+<?php get_footer(); ?>
 ?>
+
