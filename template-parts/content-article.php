@@ -6,6 +6,10 @@
             <div id="tags">
                 <?php the_tags(); ?>
             </div>
+            <?php $github = get_post_meta($post->ID, 'github', true); ?>
+            <?php if(!empty($github)){ ?>
+            <p><a href="<?php the_field('github'); ?>">View On Github</a></p>
+            <?php }?>
         </div>
         <div id="single-info-right">
         <?php 
