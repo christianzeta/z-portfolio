@@ -2,6 +2,7 @@
 
 $body-color: rgba(60,60,60,255);
 $text-color-light: rgba(213,213,213,255);
+$text-color-yellow: rgba(206,175,67,255);
 $heading-family: 'Roboto Condensed', sans-serif;
 
 /*     GENERAL     */
@@ -27,7 +28,7 @@ a{
 }
 
 body{
-    background-color: $body-color;
+    background-color: rgba(51,51,51,255);
 }
 
 #wrapper{
@@ -42,6 +43,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+
     
 
     ul{
@@ -69,7 +71,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    color: $text-color-light;
+    color: $text-color-yellow;
     border-bottom: 1px solid $text-color-light;
 
     h1{
@@ -135,10 +137,11 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: auto;
+    overflow: hidden;
 
     img{
-        height: 40%;
+        height: 250px;
+        width: auto;
     }
 
     h1{
@@ -146,15 +149,15 @@ body{
     }
 
     p{
-        margin-top: 10px;
         text-align: center;
-        padding: 10px;
+        padding: 20px;
         line-height: 1.5;
     }
 }
 
 @media screen and (max-width: 1024px) {
     #archive-container{
+        width: 95%;
         grid-template-columns: repeat(2, 1fr);
     }
   }

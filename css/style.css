@@ -22,7 +22,7 @@ a:hover {
 }
 
 body {
-  background-color: #3c3c3c;
+  background-color: #333333;
 }
 
 #wrapper {
@@ -79,7 +79,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #d5d5d5;
+  color: #ceaf43;
   border-bottom: 1px solid #d5d5d5;
 }
 
@@ -176,11 +176,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .archive-box img {
-  height: 40%;
+  height: 250px;
+  width: auto;
 }
 
 .archive-box h1 {
@@ -188,14 +189,14 @@ body {
 }
 
 .archive-box p {
-  margin-top: 10px;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   line-height: 1.5;
 }
 
 @media screen and (max-width: 1024px) {
   #archive-container {
+    width: 95%;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
