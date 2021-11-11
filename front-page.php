@@ -1,26 +1,21 @@
 <?php get_header(); ?>
     <div id="front-page-container">
         <section id="front-page-info">
-            <h1><?php the_field('title'); ?></h1>
-            <p><?php the_field('text'); ?></p>
+            <div class="center-box">
+                <h2><?php the_field('title_1'); ?></h2>
+                <h1><?php the_field('title_2'); ?></h1>
+            </div>
         </section>
         <section id="front-page-links">
-            <div class="link-card">
-                <div class="link-card-text">
-                <h2>Github</h2>
-                    <p><a href="<?php the_field('github_link')?>">View my projects on Github</a></p>
+            <div class="center-box">
+                <div class="link-card">
+                        <p><a href="<?php the_field('github_link')?>">GITHUB</a></p>
                 </div>
-            </div>
-            <div class="link-card">
-                <div class="link-card-text">
-                <h2>Email</h2>
-                    <p><?php the_field('email')?></p>
+                <div class="link-card middle">
+                        <p><?php the_field('email')?></p>
                 </div>
-            </div>
-            <div class="link-card">
-                <div class="link-card-text">
-                <h2>LinkedIn</h2>
-                    <p><a href="<?php the_field('linkedin')?>">Follow me here</a></p>
+                <div class="link-card">
+                        <p><a href="<?php the_field('linkedin')?>">LINKEDIN</a></p>
                 </div>
             </div>
         </section>
