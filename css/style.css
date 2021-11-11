@@ -154,6 +154,7 @@ body {
   width: 80%;
   height: auto;
   margin: 0 auto;
+  margin-bottom: 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
