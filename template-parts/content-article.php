@@ -1,9 +1,9 @@
 
     <section id="single-info">
         <div id="single-info-left">
-            <h1><?php the_title(); ?></h1>
-            <p><?php the_date(); ?></p>
-            <div id="tags">
+            <h1 class="title"><?php the_title(); ?></h1>
+            <p class="date"><?php the_date(); ?></p>
+            <div class="tags">
                 <?php the_tags(); ?>
             </div>
             <?php $github = get_post_meta($post->ID, 'github', true); ?>

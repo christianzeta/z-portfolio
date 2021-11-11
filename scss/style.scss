@@ -185,15 +185,10 @@ body{
 #single-container{
     width: 100%;
     min-height: 80vh;
-    color: $text-color-light;
+    color: $color-grey;
     line-height: 1.5;
+    margin-bottom: 50px;
 }
-
-#single-info{
-    width: 100%;
-    height: auto;
-}
-
 
 #single-info{
     width: 80%;
@@ -218,56 +213,94 @@ body{
     div{
         padding: 30px;
     }
+
+    .title, .date, .tags{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        color: $text-color-light;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .title{
+        background-color: $color-grey;
+    }
+
+    .date{
+        background-color: lighten($color-grey, 10%);
+        margin: 5px 0;
+    }
+
+    .tags{
+        background-color: lighten($color-grey, 20%);
+    }
 }
 
 #single-info-right{
     width: 70%;
     height: auto;
     padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
 
     p{
         margin: 10px 0;
     }
 }
 
-/*     PAGE     */
+/*     ABOUT     */
 
-#page-container{
-    width: 80%;
-    min-height: 80vh;
+#about-container{
+    width: 100%;
+    min-height: 70vh;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    color: $text-color-light;
+    color: $color-grey;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
-#page-text{
-    width: 50%;
-    height: 70%;
+#about-text{
+    width: 60%;
+    min-height: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
+    padding: 30px;
+
+    .about-title{
+        width: 70%;
+    }
 
     p{
-        padding: 20px;
+        margin-top: 20px;
+        width: 70%;
         line-height: 1.5;
     }
 }
 
-#page-image{
-    width: 50%;
-    height: 70%;
+#about-image{
+    width: 40%;
+    min-height: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: $color-grey;
 
     img{
-        width: 100%;
+        width: 80%;
         height: auto;
-        padding: 30px;
+        object-fit: contain;
+        object-position: right;
     }
 }
+
+
+    
 
 
 /*     MEDIA QUERIES     */
@@ -277,10 +310,110 @@ body{
         width: 95%;
         grid-template-columns: repeat(1, 1fr);
     }
+
+    #front-page-container{
+        width: 90%;
+    }
+
+    
+    #single-info{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #single-info-left{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        div{
+            padding: 30px;
+        }
+    
+        .title, .date, .tags{
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+    }
+    
+    #single-info-right{
+        width: 100%;
+    }
+
+    #about-container{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    
+    #about-text{
+        min-height: auto;
+    }
+    
+    #about-image{
+        width: 90%;
+        min-height: inherit;
+        margin-bottom: 50px;
+
+        img{
+            width: 70%;
+            height: auto;
+            object-fit: contain;
+            object-position: right;
+        }
+    }
+
+    #about-text{
+        width: 100%;
+        min-height: auto;
+    
+        .about-title{
+            width: 100%;
+            text-align: center;
+        }
+    
+        p{
+            margin-top: 20px;
+            width: 95%;
+            line-height: 1.5;
+        }
+    }
   }
+
+  @media screen and (max-width: 750px) {
+    #front-page-container{
+        flex-direction: column;
+    }
+
+    #front-page-links{
+        width: 100%;
+        height: auto;
+    }
+
+    #front-page-info{
+        width: 100%;
+        height: auto;
+        padding-left: 0px;
+
+        h1{
+            font-size: 24px;
+        }
+    }
+
+    .center-box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+  }
+
 
   @media screen and (max-width: 581px) {
     #archive-container{
         grid-template-columns: repeat(1, 1fr);
     }
-  }
+}
